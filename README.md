@@ -25,7 +25,7 @@ $response = $curl->urlGet('https://url-to-get');
 
 ### For a HTTP POST request:
 
-	* HTTP POST, no Content-Type defined 
+* HTTP POST, no Content-Type defined 
 
 ```
 		$postData = [
@@ -36,7 +36,7 @@ $response = $curl->urlGet('https://url-to-get');
 	$response = $curl->urlPost('https://url-to-get',$postData);
 ```
 
-	* HTTP POST, under json format:
+* HTTP POST, under json format:
 
 ```
 	$postData = [
@@ -51,7 +51,7 @@ $response = $curl->urlGet('https://url-to-get');
 	$response = $curl->urlPost('https://url-to-get',$postData,$headers);
 ```
 
-	* HTTP POST, under multipart/form-data (as regular html web forms)
+* HTTP POST, under multipart/form-data (as regular html web forms)
 
 ```
 	$postData = [
