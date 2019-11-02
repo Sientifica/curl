@@ -17,15 +17,15 @@ $curl = new Sientifica\Curl();
 
 3. Make any http (any http verb) request you want:
 
-- For a HTTP GET request:
+### For a HTTP GET request:
 
 ```
 $response = $curl->urlGet('https://url-to-get');
 ```
 
-- For a HTTP POST request:
+### For a HTTP POST request:
 
-* HTTP POST, no Content-Type defined 
+	* HTTP POST, no Content-Type defined 
 
 ```
 		$postData = [
@@ -35,7 +35,8 @@ $response = $curl->urlGet('https://url-to-get');
 
 	$response = $curl->urlPost('https://url-to-get',$postData);
 ```
-* HTTP POST, under json format:
+
+	* HTTP POST, under json format:
 
 ```
 	$postData = [
@@ -49,7 +50,8 @@ $response = $curl->urlGet('https://url-to-get');
 
 	$response = $curl->urlPost('https://url-to-get',$postData,$headers);
 ```
-* HTTP POST, under multipart/form-data (as regular html web forms)
+
+	* HTTP POST, under multipart/form-data (as regular html web forms)
 
 ```
 	$postData = [
