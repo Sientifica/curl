@@ -15,43 +15,47 @@ $curl = new Sientifica\Curl();
 
 - For a HTTP GET request:
 
+```
 $response = $curl->urlGet('https://url-to-get');
-
+```
 
 - For a HTTP POST request:
 
--- HTTP POST, no Content-Type defined 
+	- HTTP POST, no Content-Type defined 
 
-$postData = [
-	'element1' => 'Value 1', 
-	'element2' => 'Value 2' 
-];
+```
+		$postData = [
+		'element1' => 'Value 1', 
+		'element2' => 'Value 2' 
+	];
 
-$response = $curl->urlPost('https://url-to-get',$postData);
+	$response = $curl->urlPost('https://url-to-get',$postData);
+```
+	- HTTP POST, under json format:
 
--- HTTP POST, under json format:
+```
+	$postData = [
+		'element1' => 'Value 1', 
+		'element2' => 'Value 2' 
+	];
 
-$postData = [
-	'element1' => 'Value 1', 
-	'element2' => 'Value 2' 
-];
+	$headers = [
+		'Content-Type: application/json'
+	];
 
-$headers = [
-	'Content-Type: application/json'
-];
+	$response = $curl->urlPost('https://url-to-get',$postData,$headers);
+```
+	- HTTP POST, under multipart/form-data (as regular html web forms)
 
-$response = $curl->urlPost('https://url-to-get',$postData,$headers);
+```
+	$postData = [
+		'element1' => 'Value 1', 
+		'element2' => 'Value 2' 
+	];
 
--- HTTP POST, under multipart/form-data (as regular html web forms)
+	$headers = [
+		'Content-Type: multipart/form-data'
+	];
 
-$postData = [
-	'element1' => 'Value 1', 
-	'element2' => 'Value 2' 
-];
-
-$headers = [
-	'Content-Type: multipart/form-data'
-];
-
-$response = $curl->urlPost('https://url-to-get',$postData);
-
+	$response = $curl->urlPost('https://url-to-get',$postData);
+```
