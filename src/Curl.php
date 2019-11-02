@@ -4,6 +4,15 @@ namespace Sientifica;
 
 class Curl {
 
+
+    /**
+    *   Make a HTTP GET request
+    *   @param string $url A valid url string
+    *   @param mixed[] $headers (optional) Associtive array (key:value) to add as HTTP HEADER in request
+    *   
+    *   @return string $contents The body of the HTTP response
+    */
+
     public static function urlGet($url,$headers=null) {
 
         $c = curl_init();
@@ -30,6 +39,16 @@ class Curl {
         curl_close($c);
         return utf8_encode($contents);
     }
+
+
+    /**
+    *   Make a HTTP POST request
+    *   @param string $url A valid url string
+    *   @param mixed[]|string $content The content of the POST request
+    *   @param mixed[] $headers (optional) Associtive array (key:value) to add as HTTP HEADER in request
+    *   
+    *   @return string $contents The body of the HTTP response
+    */
 
     public static function urlPost($url, $content, $headers=null) {
 
@@ -101,6 +120,15 @@ class Curl {
         return utf8_encode($contents);
     }
 
+    /**
+    *   Make a HTTP DELETE request
+    *   @param string $url A valid url string
+    *   @param mixed[]|string $data The content of the DELETE request
+    *   @param mixed[] $headers (optional) Associtive array (key:value) to add as HTTP HEADER in request
+    *   
+    *   @return string $contents The body of the HTTP response
+    */
+
     public static function urlDelete($url,$data,$headers=null) {
 
         $isJsonForm = false;
@@ -169,6 +197,16 @@ class Curl {
 
         return utf8_encode($contents);
     }
+
+
+    /**
+    *   Make a HTTP PUT request
+    *   @param string $url A valid url string
+    *   @param mixed[]|string $data The content of the PUT request
+    *   @param mixed[] $headers (optional) Associtive array (key:value) to add as HTTP HEADER in request
+    *   
+    *   @return string $contents The body of the HTTP response
+    */
 
     public static function urlPUT($url, $data, $headers=null) {
 
