@@ -63,5 +63,5 @@ $response = $curl->urlGet('https://url-to-get');
 		'Content-Type: multipart/form-data'
 	];
 
-	$response = $curl->urlPost('https://url-to-get',$postData);
+	$response = $curl->urlPost('https://url-to-get',$postData,$headers);
 ```
