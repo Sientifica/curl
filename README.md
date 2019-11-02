@@ -7,7 +7,7 @@ This is a simple cURL library to dispatch HTTP GET, POST, PUT and DELETE request
 
 use Sientifica\Curl
 
-2. Instatiate a new Sientifica\Curl object:
+2. Instantiate a new Sientifica\Curl object:
 
 $curl = new Sientifica\Curl();
 
